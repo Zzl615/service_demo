@@ -9,9 +9,15 @@
 
 from typing import Optional
 from tornado.web import Application
+from tornado.web import RequestHandler
 from web_app.router import Router
 
 member_router = Router('x_service', prefix='/member')
+
+# admin模块
+@member_router('/all_member')
+class ManageUser(RequestHandler):
+    pass
 
 
 class WebApp(Application):
