@@ -1,0 +1,8 @@
+tornado==6.1
+injector==0.18.4
+SQLAlchemy==1.4.23
+aiomysql==0.0.21
+aioredis==1.3.1
+# Editable Git install with no remote (web-app==0.0.0)
+-e ./src/web_app
+-e ./src/foundation
