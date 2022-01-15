@@ -5,6 +5,7 @@ services:
     container_name: m_tornado
     ports:
         - "${SERVICE_PORT}:6150"
+        - "6379:${REDIS_HOST_PORT}"
     volumes:
         - "/home/logs/service_demo:/tmp/logs:rw"
     environment:
