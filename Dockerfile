@@ -11,11 +11,12 @@ COPY . /app
 WORKDIR /app
 
 # 更换pip源
-RUN pwd \
+RUN mkdir -p ~/.pip \ 
     && echo "[global]" > ~/.pip/pip.conf \
     && echo "index-url = https://mirrors.aliyun.com/pypi/simple/" >>  ~/.pip/pip.conf \
     && echo "[install]" >>  ~/.pip/pip.conf \
     && echo "trusted-host=mirrors.aliyun.com" >>  ~/.pip/pip.conf \
+    && pwd \
     && ls \
     && ls tornado_demo/src \
     && sh install.sh
