@@ -22,7 +22,7 @@ def define_options():
     define('conf_path', default="server.conf")
 
     define('redis_port', default=6379)
-    define('redis_ip', default='127.0.0.1')
+    define('redis_ip', default='redis')
     define('redis_db_name', default=0)
     define('redis_password', default=None)
 
