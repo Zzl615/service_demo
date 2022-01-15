@@ -21,6 +21,6 @@ RUN mkdir -p ~/.pip \
     && ls tornado_demo/src \
     && sh install.sh
 
-EXPOSE 6150
+EXPOSE [6150, 6379]
 
 CMD ["/bin/sh", "/app/run.sh"]
